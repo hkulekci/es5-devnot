@@ -1,6 +1,4 @@
-## Visualize of Global Terrorism Data with Elastic Stack
-
-
+## Devnot Workshop
 
 ### Let's Start
  
