@@ -19,7 +19,7 @@ has some default settings and these default settings will use if you don't use
 your customs. 
 
 ```
-PUT gtd
+PUT myindex
 {
     "settings" : {
         "number_of_shards" : 3,
@@ -38,13 +38,13 @@ is `date`.
 
 ```
 # Update Mapping
-PUT gtd/gtd/_mapping
+PUT myindex/mytype/_mapping
 {
   "properties": {
-    "latlon": {
+    "Location": {
       "type": "geo_point"
     },
-    "date": {
+    "Date": {
       "type": "date"
     }
   }

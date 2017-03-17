@@ -3,6 +3,7 @@ filebeat:
     -
       paths:
         - /tmp/data/*.csv
+      exclude_files: ['sample.csv']
       encoding: utf-8
       input_type: log
       document_type: myindex
