@@ -5,7 +5,7 @@
 ### Let's Start
  
  1. [Install Docker](https://docs.docker.com/engine/installation/)
- 2. [Prepare Your Environment](PrepareYourEnvironment.md)
+ - [Prepare Your Environment](PrepareYourEnvironment.md)
  - [Let's Look the Data](data/sample.csv)
  - [Prepare Your Index](PrepareYourIndex.md)
  - [Create A Pipeline](CreateAPipeline.md)
