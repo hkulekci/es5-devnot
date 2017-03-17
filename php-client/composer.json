@@ -1,0 +1,44 @@
+{
+    "name": "GTD ES Workshop",
+    "description": "ES Client Example For Elasticsearch Workshop",
+    "type": "project",
+    "homepage": "https://github.com/hkulekci/es5-workshop",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Haydar KÜLEKCİ",
+            "homepage": "https://elasticsearch.kulekci.net/"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev",
+            "dev-develop": "1.1-dev"
+        }
+    },
+    "require": {
+        "php": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cs",
+            "@test"
+        ],
+        "cs": "phpcs",
+        "cs-fix": "phpcbf",
+        "start": "php -S 0.0.0.0:8080 -t public/ public/index.php",
+        "console": "bin/console",
+        "test": "phpunit"
+    }
+}

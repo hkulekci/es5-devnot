@@ -1,0 +1,38 @@
+version: '2'
+
+services:
+    elasticsearch:
+        build: ./.docker/elasticsearch
+        ports:
+            - "9200:9200"
+            - "9300:9300"
+
+    kibana:
+        build: ./.docker/kibana
+        ports:
+            - "5601:5601"
+        links:
+            - elasticsearch
+
+    logstash:
+        build: ./.docker/logstash
+        ports:
+            - "5044:5044"
+        links:
+            - elasticsearch
+
+    beat:
+        build: ./.docker/beat
+        volumes:
+            - ./data:/tmp/data
+        links:
+            - logstash
+
+    php-client:
+        build: ./php-client
+        volumes:
+            - ./php-client:/var/www/php-client
+        ports:
+            - "8080:8080"
+        links:
+            - elasticsearch
